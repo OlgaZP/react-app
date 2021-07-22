@@ -1,0 +1,25 @@
+table {
+    width: 90%;
+
+    caption {
+        color:rgb(54, 114, 114);
+        font-size: larger;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding-bottom: 1em;
+    }
+
+    th {
+        color: red;               
+    }
+
+    td {
+        width: 20px;
+        text-align: right;
+    }
+
+    tbody {
+        color: lightgrey;
+        font-weight: bold;        
+    }
+}
