@@ -2,7 +2,6 @@ import React from 'react'
 import CounterWrapper from '../../components/CounterWrapper';
 import Greeting from '../../components/Greeting';
 import LoginForm from '../../components/LoginForm';
-import Calendar from '../../components/Calendar';
 import ViewPortParams from '../../components/ViewPortParams';
 
 import {
@@ -31,9 +30,7 @@ function Classwork() {
                 <li>
                     <Link to={`${url}/viewport`}>ViewPort Parameters Example</Link>
                 </li>
-                <li>
-                    <Link to={`${url}/calendar`}>Calendar Example</Link>
-                </li>
+                
             </ul>
 
             <Switch>
@@ -49,9 +46,7 @@ function Classwork() {
                 <Route path={`${path}/viewport`}>
                     <ViewPortParams />
                 </Route>
-                <Route path={`${path}/calendar`}>
-                    <Calendar />
-                </Route>
+                
             </Switch>
         </div>
     )

@@ -1,5 +1,6 @@
 table {
     width: 90%;
+    padding: 0.5em;
 
     caption {
         color:rgb(54, 114, 114);
@@ -10,12 +11,14 @@ table {
     }
 
     th {
-        color: red;               
+        width: 20px;
+        color: red;  
+        text-align: center;             
     }
 
     td {
         width: 20px;
-        text-align: right;
+        text-align: center;
     }
 
     tbody {
