@@ -3,6 +3,7 @@ import CounterWrapper from '../../components/CounterWrapper';
 import Greeting from '../../components/Greeting';
 import LoginForm from '../../components/LoginForm';
 import ViewPortParams from '../../components/ViewPortParams';
+import UsersLoader from '../../components/UsersLoader';
 
 import {
     BrowserRouter as Router,
@@ -30,6 +31,9 @@ function Classwork() {
                 <li>
                     <Link to={`${url}/viewport`}>ViewPort Parameters Example</Link>
                 </li>
+                <li>
+                    <Link to={`${url}/usersloader`}>UsersLoader Example</Link>
+                </li>
                 
             </ul>
 
@@ -45,6 +49,9 @@ function Classwork() {
                 </Route>
                 <Route path={`${path}/viewport`}>
                     <ViewPortParams />
+                </Route>
+                <Route path={`${path}/usersloader`}>
+                    <UsersLoader />
                 </Route>
                 
             </Switch>
