@@ -4,6 +4,9 @@ import Greeting from '../../components/Greeting';
 import LoginForm from '../../components/LoginForm';
 import ViewPortParams from '../../components/ViewPortParams';
 import UsersLoader from '../../components/UsersLoader';
+import PhonesProvider from '../../components/PhonesProvider';
+import UsersProvider from '../../components/UsersProvider';
+import DataProvider from '../../components/DataProvider';
 
 import {
     BrowserRouter as Router,
@@ -34,6 +37,15 @@ function Classwork() {
                 <li>
                     <Link to={`${url}/usersloader`}>UsersLoader Example</Link>
                 </li>
+                <li>
+                    <Link to={`${url}/phonesprovider`}>PhonesProvider Example</Link>
+                </li>
+                <li>
+                    <Link to={`${url}/usersprovider`}>UsersProvider Example</Link>
+                </li>
+                <li>
+                    <Link to={`${url}/dataprovider`}>DataProvider Template</Link>
+                </li>
                 
             </ul>
 
@@ -52,6 +64,27 @@ function Classwork() {
                 </Route>
                 <Route path={`${path}/usersloader`}>
                     <UsersLoader />
+                </Route>
+                <Route path={`${path}/phonesprovider`}>
+                    <PhonesProvider />
+                </Route>
+                <Route path={`${path}/usersprovider`}>
+                    <UsersProvider />
+                </Route>
+                <Route path={`${path}/dataprovider`}>
+                    <DataProvider fileName='/phones.json'> 
+                        return <> 
+                            {isFetching&& <div>Loading...</div>}
+                            {error&& <div>EROOR</div>}
+                            <ul>
+                                {phones.map(p => (
+                                    <li key={p.id}>
+                                    {p.brand} {p.model}: {p.price}
+                                    </li>
+                                ))}
+                            </ul>
+                        </>;
+                    <DataProvider/>
                 </Route>
                 
             </Switch>
