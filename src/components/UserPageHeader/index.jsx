@@ -1,25 +1,18 @@
 import React from 'react';
 import {UserContext} from '../../contexts';
+import { withUser } from '../HOCs';
 import styles from './UserPageHeader.module.scss';
 import classNames from 'classnames';
 
-function UserPageHeader() {
+function UserPageHeader(props) {
+    const {user} = props;
     return (
-        <div>
-            <UserContext.Consumer>
-            {user => {
-                const {firstName, src} = user;
-                return <div className={styles.headerContainer}>
-                    <span>{firstName}</span>                    
-                    <img src={src}/>
-                    
-                </div>
-                    
-            }}
-            </UserContext.Consumer>
-        </div>
-    );
+        <div className={styles.headerContainer}>
+            <span>{user.firstName}</span>                    
+            <img src={user.src}/>                    
+        </div> 
+    );           
 }
 
-export default UserPageHeader;
+export default withUser(UserPageHeader);
 

@@ -9,6 +9,7 @@ import UsersProvider from '../../components/UsersProvider';
 import DataProvider from '../../components/DataProvider';
 import ContextExample from '../../components/ContextExample';
 import UserPage from '../UserPage';
+import YupForm from '../../components/YupForm';
 
 import {
     BrowserRouter as Router,
@@ -50,7 +51,10 @@ function Classwork() {
                 </li> */}
                 <li>
                     <Link to={`${url}/context`}>UserPage with Context Example</Link>
-                </li>                
+                </li>     
+                <li>
+                    <Link to={`${url}/easyform`}>Form with Yup Example</Link>
+                </li>            
                 
             </ul>
 
@@ -78,7 +82,10 @@ function Classwork() {
                 </Route>
                 <Route path={`${path}/context`}>
                     <ContextExample />
-                </Route>                
+                </Route>      
+                <Route path={`${path}/easyform`}>
+                    <YupForm />
+                </Route>          
                 {/* <Route path={`${path}/dataprovider`}>
                     <DataProvider fileName='/phones.json'> 
                         return <> 

@@ -1,22 +1,17 @@
 import React from 'react';
+import { withUser } from '../HOCs';
 import {UserContext} from '../../contexts';
 import styles from './UserPageSidebar.module.scss';
 
-function UserPageSidebar() {
+function UserPageSidebar(props) {
+    const { user : {firstName, lastName, src}} = props;
     return (
-        <div>
-            <UserContext.Consumer>
-            {user => {
-                const {firstName, lastName, src} = user;
-                return <div className={styles.userPageSidebar}>
-                    <div>{firstName}</div>
-                    <div>{lastName}</div>
-                    <img src={src}/>                    
-                </div>    
-            }}
-            </UserContext.Consumer>
-        </div>
-    )
+        <div className={styles.userPageSidebar}>
+             <div>{firstName}</div>
+             <div>{lastName}</div>
+             <img src={src}/>                    
+        </div>    
+    );       
 }
 
-export default UserPageSidebar;
+export default withUser(UserPageSidebar);
