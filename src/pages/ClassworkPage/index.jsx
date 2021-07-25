@@ -7,6 +7,8 @@ import UsersLoader from '../../components/UsersLoader';
 import PhonesProvider from '../../components/PhonesProvider';
 import UsersProvider from '../../components/UsersProvider';
 import DataProvider from '../../components/DataProvider';
+import ContextExample from '../../components/ContextExample';
+import UserPage from '../UserPage';
 
 import {
     BrowserRouter as Router,
@@ -43,9 +45,12 @@ function Classwork() {
                 <li>
                     <Link to={`${url}/usersprovider`}>UsersProvider Example</Link>
                 </li>
-                <li>
+                {/* <li>
                     <Link to={`${url}/dataprovider`}>DataProvider Template</Link>
-                </li>
+                </li> */}
+                <li>
+                    <Link to={`${url}/context`}>UserPage with Context Example</Link>
+                </li>                
                 
             </ul>
 
@@ -71,7 +76,10 @@ function Classwork() {
                 <Route path={`${path}/usersprovider`}>
                     <UsersProvider />
                 </Route>
-                <Route path={`${path}/dataprovider`}>
+                <Route path={`${path}/context`}>
+                    <ContextExample />
+                </Route>                
+                {/* <Route path={`${path}/dataprovider`}>
                     <DataProvider fileName='/phones.json'> 
                         return <> 
                             {isFetching&& <div>Loading...</div>}
@@ -85,7 +93,7 @@ function Classwork() {
                             </ul>
                         </>;
                     <DataProvider/>
-                </Route>
+                </Route> */}
                 
             </Switch>
         </div>
