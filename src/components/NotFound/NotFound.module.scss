@@ -1,0 +1,12 @@
+@import './../../common/styles/_templates.scss';
+
+.divNotFound {
+    @include flex-container-column;
+
+    // background-color: midnightblue;
+    color: midnightblue;
+
+    img {
+        height: 50vh;
+    }
+}

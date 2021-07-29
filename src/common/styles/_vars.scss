@@ -1,6 +1,3 @@
-$dark-color: #111111;
-$light-color: #DDDDDD;
-
 $sm: 576px;
 $md: 768px;
 $lg: 992px;
@@ -9,3 +6,9 @@ $xl: 1200px;
 //LoginForm
 $valid-color: darkgreen;
 $invalid-color: darkred;
+
+//SignUp Form
+$dark-color: navy;
+$light-color: white;
+$valid-signup: darkblue;
+$invalid-signup: rgb(199, 12, 12);

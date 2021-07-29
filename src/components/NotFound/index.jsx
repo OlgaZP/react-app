@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import styles from './NotFound.module.scss';
+import imageNotFound from '../../common/images/404-image.jpg';
 
 function NotFound(props) {
     // const {history} = props;
@@ -7,8 +9,10 @@ function NotFound(props) {
     // }, 5000);
     
     return (
-        <div>
-            The Page Didn't Found!
+        <div class={styles.divNotFound}>            
+            <h2> Ooops! The page has lost in Space! </h2>
+            <img src={imageNotFound} alt="404 image" />
+            <button>Go home...</button>
         </div>
     )
 }

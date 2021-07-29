@@ -1,5 +1,6 @@
 import React from 'react';
 import Calendar from '../../components/Calendar';
+import SignUpFormHW from '../../components/SignUpFormHW';
 
 import {
     BrowserRouter as Router,
@@ -18,10 +19,16 @@ function HomeworkPage () {
                 <li>
                     <Link to={`${url}/calendar`}>Calendar Example</Link>
                 </li>
+                <li>
+                    <Link to={`${url}/signupform`}>SignUp Form Example</Link>
+                </li>
             </ul>
             <Switch>
                 <Route path={`${path}/calendar`}>
                     <Calendar />
+                </Route>
+                <Route path={`${path}/signupform`}>
+                    <SignUpFormHW />
                 </Route>
             </Switch>
         </div>

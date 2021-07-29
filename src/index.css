@@ -5,9 +5,32 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* background-color: dodgerblue; */
+
+  background-image: url("./common/images/blue-crumpled-paper-texture.jpg");
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+  text-align: center;
+}
+
+.mainMenu {
+  /* background-color: dodgerblue;   */
+}
+
+.mainMenuRow {
+  display: flex;
+  justify-content: center;
+}
+
+.mainMenu li {
+  list-style: none;
+  /* width: 5em; */
+  margin: 0.5em;
 }

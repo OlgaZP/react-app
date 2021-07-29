@@ -36,9 +36,12 @@ function App() {
   return (
     <>
       <Header/>
-      <div>
+      <nav class="mainMenu">
         <Router>
-          <ul>
+          <ul class="mainMenuRow">
+            {/* <li>
+              <Link to={'/'}>Home</Link>
+            </li> */}
             <li>
               <Link to={'/classwork'}>Classwork</Link>
             </li>
@@ -48,6 +51,9 @@ function App() {
           </ul>
         
         <Switch>
+          {/* <Route exact path={'/'}>
+            <div></div>
+          </Route> */}
           <Route path={'/classwork'}>
             <ClassworkPage />
           </Route>
@@ -60,7 +66,8 @@ function App() {
         </Switch>
         </Router>
         
-      </div>
+      </nav>
+      <p>This exapmles show my progress on React! They may contain some errors or not popular technologies.</p>
       <Footer/>
     </>
   );
