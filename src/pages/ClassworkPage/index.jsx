@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import NotFound from '../../components/NotFound';
 import CounterWrapper from '../../components/CounterWrapper';
 import Greeting from '../../components/Greeting';
 import LoginForm from '../../components/LoginForm';
@@ -23,7 +24,7 @@ function Classwork() {
     const {path, url} = useRouteMatch();
     return (
         <div>
-            ClassWorks components
+            ClassWorks components were writing during lessons.
             <ul>
                 <li>
                     <Link to={`${url}/greeting`}>Greeting</Link>
@@ -101,6 +102,9 @@ function Classwork() {
                         </>;
                     <DataProvider/>
                 </Route> */}
+                <Route path={`${path}/*`}>
+                    <NotFound />
+                </Route>
                 
             </Switch>
         </div>

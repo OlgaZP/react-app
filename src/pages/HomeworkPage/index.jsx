@@ -1,4 +1,5 @@
 import React from 'react';
+import NotFound from '../../components/NotFound';
 import Calendar from '../../components/Calendar';
 import SignUpFormHW from '../../components/SignUpFormHW';
 
@@ -14,7 +15,9 @@ function HomeworkPage () {
     const {path, url} = useRouteMatch();
     return (
         <div> 
-            Homework page
+            <p>This page contains components realized by myself. 
+            Tasks get from lessons.
+            </p>
             <ul>
                 <li>
                     <Link to={`${url}/calendar`}>Calendar Example</Link>
@@ -29,6 +32,9 @@ function HomeworkPage () {
                 </Route>
                 <Route path={`${path}/signupform`}>
                     <SignUpFormHW />
+                </Route>
+                <Route path={`${path}/*`}>
+                    <NotFound />
                 </Route>
             </Switch>
         </div>

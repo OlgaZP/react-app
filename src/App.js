@@ -19,17 +19,21 @@ import {
 //main application page like table of contents
 //use routing
 function Header () {
-  return <h1>Header React Examples</h1>;
+  return <h1>React Examples by Olga</h1>;
 }
 
 function Footer () {
   return (
-    <>
+    <div class="footer">
       <ContactsPage/>
       
       <AboutPage/>
-    </>
+    </div>
   );
+}
+
+function Home () {
+  return <div>This is HomePage of project</div>;
 }
 
 function App() {
@@ -39,9 +43,9 @@ function App() {
       <nav class="mainMenu">
         <Router>
           <ul class="mainMenuRow">
-            {/* <li>
+            <li>
               <Link to={'/'}>Home</Link>
-            </li> */}
+            </li>
             <li>
               <Link to={'/classwork'}>Classwork</Link>
             </li>
@@ -51,9 +55,9 @@ function App() {
           </ul>
         
         <Switch>
-          {/* <Route exact path={'/'}>
-            <div></div>
-          </Route> */}
+          <Route exact path={'/'}>
+            <Home />
+          </Route> 
           <Route path={'/classwork'}>
             <ClassworkPage />
           </Route>
@@ -67,7 +71,7 @@ function App() {
         </Router>
         
       </nav>
-      <p>This exapmles show my progress on React! They may contain some errors or not popular technologies.</p>
+      <p>These exapmles show my progress on React! They may contain some errors or not popular technologies.</p>
       <Footer/>
     </>
   );
