@@ -1,4 +1,6 @@
 @import '../../common/styles/vars';
+@import '../../common/styles/templates';
+
 
 * {
     box-sizing: border-box;
@@ -29,18 +31,15 @@
 }
 
 .formInput {
-    padding: 0.5em;
-    margin-left: auto;
-    width: 75%;
+    @extend %form-components;
+
     border-radius: 0.5em;
-    outline: none;   
+    // outline: none;   
 }
 
 .formButton {
-    align-self: flex-end;
-    width: 72%;
-    padding: 0.5em;
-    margin-right: 0.5em;
+    @extend %form-components;
+    
     background-color: $light-color;
     color: $dark-color;
     border-radius: 0.5em;

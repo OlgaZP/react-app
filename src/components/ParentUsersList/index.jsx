@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ChildUsersList from '../ChildUsersList ';
+import ChildUsersList from '../ChildUsersList';
 import ChildSelectedUsersList from './../ChildSelectedUsersList';
 
 const dbUsers = [

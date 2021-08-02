@@ -2,6 +2,7 @@ import React from 'react';
 import NotFound from '../../components/NotFound';
 import CounterWrapper from '../../components/CounterWrapper';
 import Greeting from '../../components/Greeting';
+import ParentUsersList from '../../components/ParentUsersList';
 import LoginForm from '../../components/LoginForm';
 import ViewPortParams from '../../components/ViewPortParams';
 import UsersLoader from '../../components/UsersLoader';
@@ -31,6 +32,9 @@ function Classwork() {
                 </li>
                 <li>
                     <Link to={`${url}/counter`}>Simple Counter</Link>
+                </li>
+                <li>
+                    <Link to={`${url}/userslist`}>UsersList Example 1</Link>
                 </li>
                 <li>
                     <Link to={`${url}/loginform`}>Login Form Example</Link>
@@ -65,6 +69,9 @@ function Classwork() {
                 </Route>
                 <Route path={`${path}/counter`}>
                     <CounterWrapper />
+                </Route>
+                <Route path={`${path}/userslist`}>
+                    <ParentUsersList />
                 </Route>
                 <Route path={`${path}/loginform`}>
                     <LoginForm />

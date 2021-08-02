@@ -1,5 +1,6 @@
-import { parse, addDays, isThisMonth } from 'date-fns';
 import React from 'react';
+import { parse, addDays, isThisMonth } from 'date-fns';
+import PropTypes from 'prop-types';
 import Day from '../Day';
 
 const getDaysOfWeek = (week, year) => {
@@ -24,5 +25,10 @@ function Week(props) {
     
     return <tr>{getDaysOfWeek(week, year)}</tr>;
 }
+
+Week.propTypes = {
+    week: PropTypes.number.isRequired,
+    year: PropTypes.number.isRequired,
+};
 
 export default Week;

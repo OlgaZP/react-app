@@ -12,7 +12,7 @@ export default class SignUpFormHW extends Component {
              passwordValue: '',
              isPasswordValid: false,
              emailValue: '',
-             isEmailValid: false,
+             isEmailValid: false, 
 
         }        
     };
@@ -20,19 +20,28 @@ export default class SignUpFormHW extends Component {
     handleNameChange = ({target: { value }}) => {        
         this.setState({ 
             nameValue : value,
-            isNameValid: /^\S+$/.test(value),
+            isNameValid: /^[A-Za-z]\w{0,19}$/.test(value),
         });
     };
 
-    handleEmailChange = ({target: { value }}) => {
-        console.log('EmailChangeHandler :>> ');
-        this.setState({ emailValue : value});
+    handleEmailChange = ({target: { value }}) => {        
+        this.setState({ 
+            emailValue : value,
+            isEmailValid: /^(\w\.?)+@[\w\.]+\.\w{2,}$/.test(value),
+        });
     };
 
     handlePasswordChange = ({target: { value } }) => {
-        this.setState( { passwordValue : value});
+        this.setState({ 
+            passwordValue : value,
+            //регулярное выражение взято из интернета и подправлено,
+            // предполагает обязательное наличие
+            //1 большой, 1 маленькой латинской буквы и цифры, в любом месте
+            isPasswordValid: /(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*\d.*)[A-Za-z\d]{8,12}/.test(value),
+        });
     };
 
+    //обработчик всей формы
     submitHandler = e => {
         e.preventDefault();
     };
@@ -43,10 +52,17 @@ export default class SignUpFormHW extends Component {
                 passwordValue,
                 isNameValid, 
                 isEmailValid, 
-                isPAsswordValid} = this.state;
+                isPasswordValid} = this.state;
         const nameClassNames = classNames( styles.formInput, {
             [isNameValid ? styles.valid : styles.invalid] : nameValue,
         });
+        const emailClassNames = classNames( styles.formInput, {
+            [isEmailValid ? styles.valid : styles.invalid] : emailValue,
+        });
+        const passwordClassNames = classNames( styles.formInput, {
+            [isPasswordValid ? styles.valid : styles.invalid] : passwordValue,
+        });
+
         return (            
             <form className={styles.formContainer} onSubmit={this.submitHandler}>
                 <label className={styles.formLabel}> Sign up...</label>
@@ -65,7 +81,7 @@ export default class SignUpFormHW extends Component {
                     name="emailValue" 
                     value={emailValue} 
                     placeholder="your_email@mail.com" 
-                    className={styles.formInput}
+                    className={emailClassNames}
                     onChange={this.handleEmailChange} />
                 </label>
                 <label className={styles.formLabel}> Password
@@ -74,10 +90,13 @@ export default class SignUpFormHW extends Component {
                     name="passwordValue" 
                     value={passwordValue} 
                     placeholder="password" 
-                    className={styles.formInput}
+                    title="8-12 symbols: 1 upper case letter, 1 lower case and 1 digin required"
+                    className={passwordClassNames}
                     onChange={this.handlePasswordChange} />
                 </label>
-                <button type="submit" className={styles.formButton}>SignUp</button>
+                <label className={styles.formLabel}>
+                    <button type="submit" className={styles.formButton}>SignUp</button>
+                </label>
             </form>            
         )
     }
