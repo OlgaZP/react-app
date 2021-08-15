@@ -52,8 +52,8 @@ function App() {
             <li>
               <Link to={'/homework'}>Homework</Link>
             </li>
-          </ul>
-        
+          </ul>        
+      
         <Switch>
           <Route exact path={'/'}>
             <Home />
@@ -67,10 +67,9 @@ function App() {
           <Route path={'*'}>
             <NotFound />
           </Route>
-        </Switch>
-        </Router>
-        
-      </nav>
+        </Switch>       
+        </Router>  
+      </nav>  
       <p>These exapmles show my progress on React! They may contain some errors or not popular technologies.</p>
       <Footer/>
     </>

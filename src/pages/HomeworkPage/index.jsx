@@ -2,6 +2,7 @@ import React from 'react';
 import NotFound from '../../components/NotFound';
 import Calendar from '../../components/Calendar';
 import SignUpFormHW from '../../components/SignUpFormHW';
+import ParentUsersListHW from '../../components/ParentUsersListHW';
 
 import {
     BrowserRouter as Router,
@@ -10,6 +11,7 @@ import {
     Link,
     useRouteMatch,
   } from "react-router-dom";
+
 
 function HomeworkPage () {
     const {path, url} = useRouteMatch();
@@ -25,6 +27,9 @@ function HomeworkPage () {
                 <li>
                     <Link to={`${url}/signupform`}>SignUp Form Example</Link>
                 </li>
+                <li>
+                    <Link to={`${url}/userlisthw`}>UserList Example</Link>
+                </li>
             </ul>
             <Switch>
                 <Route path={`${path}/calendar`}>
@@ -32,6 +37,9 @@ function HomeworkPage () {
                 </Route>
                 <Route path={`${path}/signupform`}>
                     <SignUpFormHW />
+                </Route>
+                <Route path={`${path}/userlisthw`}>
+                    <ParentUsersListHW />
                 </Route>
                 <Route path={`${path}/*`}>
                     <NotFound />
