@@ -12,6 +12,7 @@ import DataProvider from '../../components/DataProvider';
 import ContextExample from '../../components/ContextExample';
 import UserPage from '../UserPage';
 import YupForm from '../../components/YupForm';
+import MouseClickerHook from '../../components/MouseClickerHook';
 
 import {
   BrowserRouter as Router,
@@ -60,6 +61,9 @@ function Classwork () {
         <li>
           <Link to={`${url}/easyform`}>Form with Yup Example</Link>
         </li>
+        <li>
+          <Link to={`${url}/clicker`}>MouseClicker with Hook Example</Link>
+        </li>
       </ul>
       <Switch>
         <Route path={`${path}/greeting`}>
@@ -92,6 +96,10 @@ function Classwork () {
         <Route path={`${path}/easyform`}>
           <YupForm />
         </Route>
+        <Route path={`${path}/clicker`}>
+          <MouseClickerHook />
+        </Route>
+        ;
         {/* <Route path={`${path}/dataprovider`}>
                     <DataProvider fileName='/phones.json'> 
                         return <> 

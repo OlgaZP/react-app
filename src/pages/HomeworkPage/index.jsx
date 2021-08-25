@@ -4,6 +4,7 @@ import Calendar from '../../components/Calendar';
 import SignUpFormHW from '../../components/SignUpFormHW';
 import ParentUsersListHW from '../../components/ParentUsersListHW';
 import SquadCloneLoginPage from '../SquadCloneLoginPage';
+import CounterHook from '../../components/CounterHook';
 
 import {
   BrowserRouter as Router,
@@ -34,6 +35,9 @@ function HomeworkPage () {
         <li>
           <Link to={`${url}/squad`}>Squad Clone Login Example</Link>
         </li>
+        <li>
+          <Link to={`${url}/counth`}>Simple Counter with Hook Example</Link>
+        </li>
       </ul>
       <Switch>
         <Route path={`${path}/calendar`}>
@@ -47,6 +51,9 @@ function HomeworkPage () {
         </Route>
         <Route path={`${path}/squad`}>
           <SquadCloneLoginPage />
+        </Route>
+        <Route path={`${path}/counth`}>
+          <CounterHook />
         </Route>
         <Route path={`${path}/*`}>
           <NotFound />
