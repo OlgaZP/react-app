@@ -1,16 +1,16 @@
 import React from 'react';
 
-function ChildSelectedUsersListHW(props) {
-    const { users } = props;
-    const selectedUsers = users.filter( user => user.isSelected);
+function ChildSelectedUsersListHW (props) {
+  const { users } = props;
+  const selectedUsers = users.filter(user => user.isSelected);
 
-    const mapUsers = ({id, firstName, lastName})=> (
+  const mapUsers = ({ id, firstName, lastName }) => (
     <li key={id}>
-        {firstName} {lastName}
+      {firstName} {lastName}
     </li>
-    );
-    
-    return <ol>{selectedUsers.map(mapUsers)}</ol>;
+  );
+
+  return <ol>{selectedUsers.map(mapUsers)}</ol>;
 }
 
-export default ChildSelectedUsersListHW
+export default ChildSelectedUsersListHW;

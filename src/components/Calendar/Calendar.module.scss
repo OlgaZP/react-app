@@ -1,36 +1,35 @@
 * {
-    box-sizing: border-box;    
+  box-sizing: border-box;
 }
 
 article {
-    max-width: 600px;
-    height: 20em;
-    width: 100%;
-    margin: 0 auto;     
+  max-width: 600px;
+  height: 20em;
+  width: 100%;
+  margin: 0 auto;
 
-    display: flex;    
-    justify-content: space-between; 
+  display: flex;
+  justify-content: space-between;
 
-    border: 5px solid rgb(14, 112, 75);
+  border: 5px solid rgb(14, 112, 75);
 }
 
 .right {
-    width: 50%;
-    background-color: white;
-    color: grey;
-    padding: 2em;         
+  width: 50%;
+  background-color: white;
+  color: grey;
+  padding: 2em;
 }
 
-.left {    
-    background-color: rgb(66, 185, 165);
-    width: 50%;
-    color: white;
-    padding: 1.5em;
-    font-size: larger;
-    
+.left {
+  background-color: rgb(66, 185, 165);
+  width: 50%;
+  color: white;
+  padding: 1.5em;
+  font-size: larger;
 
-    display: flex;
-    flex-direction: column;
-    // justify-content: space-around;
-    align-items: center;  
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-around;
+  align-items: center;
 }

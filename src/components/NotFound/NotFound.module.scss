@@ -1,34 +1,33 @@
 @import './../../common/styles/_templates.scss';
 
 .divNotFound {
-    @include flex-container-column;
+  @include flex-container-column;
 
-    // background-color: midnightblue;
-    color: midnightblue;
+  // background-color: midnightblue;
+  color: midnightblue;
 
-    img {
-        height: 50vh;
-        width: 65%;
-    }
+  img {
+    height: 50vh;
+    width: 65%;
+  }
 
-    button {
-        margin: 1em;
-        padding: 1.5em;
-        background-color: rgb(36, 43, 104);
-        color: white;
-        border: none;
-        box-shadow: 0 0 10px 5px midnightblue; 
-        width: 65%;
-    }
+  button {
+    margin: 1em;
+    padding: 1.5em;
+    background-color: rgb(36, 43, 104);
+    color: white;
+    border: none;
+    box-shadow: 0 0 10px 5px midnightblue;
+    width: 65%;
+  }
 
-    button:hover {
-        background-color: rgb(46, 56, 141);
-        color: white;
-        box-shadow: 0 0 10px 5px midnightblue; 
-    }
+  button:hover {
+    background-color: rgb(46, 56, 141);
+    color: white;
+    box-shadow: 0 0 10px 5px midnightblue;
+  }
 
-    button:active {
-        box-shadow: inset 0 0 10px white;
-    }
-    
+  button:active {
+    box-shadow: inset 0 0 10px white;
+  }
 }

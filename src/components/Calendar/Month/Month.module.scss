@@ -1,28 +1,28 @@
 table {
-    width: 90%;
-    padding: 0.5em;
+  width: 90%;
+  padding: 0.5em;
 
-    caption {
-        color:rgb(54, 114, 114);
-        font-size: larger;
-        font-weight: bold;
-        text-transform: uppercase;
-        padding-bottom: 1em;
-    }
+  caption {
+    color: rgb(54, 114, 114);
+    font-size: larger;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 1em;
+  }
 
-    th {
-        width: 20px;
-        color: red;  
-        text-align: center;             
-    }
+  th {
+    width: 20px;
+    color: red;
+    text-align: center;
+  }
 
-    td {
-        width: 20px;
-        text-align: center;
-    }
+  td {
+    width: 20px;
+    text-align: center;
+  }
 
-    tbody {
-        color: lightgrey;
-        font-weight: bold;        
-    }
+  tbody {
+    color: lightgrey;
+    font-weight: bold;
+  }
 }

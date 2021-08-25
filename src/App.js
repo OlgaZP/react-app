@@ -14,7 +14,7 @@ import {
   Route,
   Link,
   useRouteMatch,
-} from "react-router-dom";
+} from 'react-router-dom';
 
 //main application page like table of contents
 //use routing
@@ -24,10 +24,10 @@ function Header () {
 
 function Footer () {
   return (
-    <div class="footer">
-      <ContactsPage/>
-      
-      <AboutPage/>
+    <div class='footer'>
+      <ContactsPage />
+
+      <AboutPage />
     </div>
   );
 }
@@ -36,13 +36,13 @@ function Home () {
   return <div>This is HomePage of project</div>;
 }
 
-function App() {
+function App () {
   return (
     <>
-      <Header/>
-      <nav class="mainMenu">
-        <Router>
-          <ul class="mainMenuRow">
+      <Header />
+      <Router>
+        <nav>
+          <ul class='mainMenuRow'>
             <li>
               <Link to={'/'}>Home</Link>
             </li>
@@ -52,12 +52,12 @@ function App() {
             <li>
               <Link to={'/homework'}>Homework</Link>
             </li>
-          </ul>        
-      
+          </ul>
+        </nav>
         <Switch>
           <Route exact path={'/'}>
             <Home />
-          </Route> 
+          </Route>
           <Route path={'/classwork'}>
             <ClassworkPage />
           </Route>
@@ -67,11 +67,14 @@ function App() {
           <Route path={'*'}>
             <NotFound />
           </Route>
-        </Switch>       
-        </Router>  
-      </nav>  
-      <p>These exapmles show my progress on React! They may contain some errors or not popular technologies.</p>
-      <Footer/>
+        </Switch>
+      </Router>
+
+      <p>
+        These exapmles show my progress on React! They may contain some errors
+        or not popular technologies.
+      </p>
+      <Footer />
     </>
   );
 }

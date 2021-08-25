@@ -1,18 +1,17 @@
 .userPageSidebar {
-    width: 100%;
-    border: 2px solid lightseagreen;
-    color: blue;
+  width: 100%;
+  border: 2px solid lightseagreen;
+  color: blue;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 
-    img {
-        width: 7em;
-        height: 7em;;
-        border: 1px sold darkblue;
-        border-radius: 50%;
-    }
-
+  img {
+    width: 7em;
+    height: 7em;
+    border: 1px sold darkblue;
+    border-radius: 50%;
+  }
 }

@@ -1,13 +1,13 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    max-width: 500px;
-    min-width: 300px;
-    border: 5px solid darkblue;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 500px;
+  min-width: 300px;
+  border: 5px solid darkblue;
 }
 
 .time {
-    font-size: 5em;
-    text-align: center;
+  font-size: 5em;
+  text-align: center;
 }

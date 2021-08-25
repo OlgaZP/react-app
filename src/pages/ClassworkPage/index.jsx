@@ -14,87 +14,85 @@ import UserPage from '../UserPage';
 import YupForm from '../../components/YupForm';
 
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    useRouteMatch,
-  } from "react-router-dom";
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+} from 'react-router-dom';
 
-function Classwork() {
-    const {path, url} = useRouteMatch();
-    return (
-        <div>
-            ClassWorks components were writing during lessons.
-            <ul>
-                <li>
-                    <Link to={`${url}/greeting`}>Greeting</Link>
-                </li>
-                <li>
-                    <Link to={`${url}/counter`}>Simple Counter</Link>
-                </li>
-                <li>
-                    <Link to={`${url}/userslist`}>UsersList Example 1</Link>
-                </li>
-                <li>
-                    <Link to={`${url}/loginform`}>Login Form Example</Link>
-                </li>
-                <li>
-                    <Link to={`${url}/viewport`}>ViewPort Parameters Example</Link>
-                </li>
-                <li>
-                    <Link to={`${url}/usersloader`}>UsersLoader Example</Link>
-                </li>
-                <li>
-                    <Link to={`${url}/phonesprovider`}>PhonesProvider Example</Link>
-                </li>
-                <li>
-                    <Link to={`${url}/usersprovider`}>UsersProvider Example</Link>
-                </li>
-                {/* <li>
+function Classwork () {
+  const { path, url } = useRouteMatch();
+  return (
+    <div>
+      ClassWorks components were writing during lessons.
+      <ul>
+        <li>
+          <Link to={`${url}/greeting`}>Greeting</Link>
+        </li>
+        <li>
+          <Link to={`${url}/counter`}>Simple Counter</Link>
+        </li>
+        <li>
+          <Link to={`${url}/userslist`}>UsersList Example 1</Link>
+        </li>
+        <li>
+          <Link to={`${url}/loginform`}>Login Form Example</Link>
+        </li>
+        <li>
+          <Link to={`${url}/viewport`}>ViewPort Parameters Example</Link>
+        </li>
+        <li>
+          <Link to={`${url}/usersloader`}>UsersLoader Example</Link>
+        </li>
+        <li>
+          <Link to={`${url}/phonesprovider`}>PhonesProvider Example</Link>
+        </li>
+        <li>
+          <Link to={`${url}/usersprovider`}>UsersProvider Example</Link>
+        </li>
+        {/* <li>
                     <Link to={`${url}/dataprovider`}>DataProvider Template</Link>
                 </li> */}
-                <li>
-                    <Link to={`${url}/context`}>UserPage with Context Example</Link>
-                </li>     
-                <li>
-                    <Link to={`${url}/easyform`}>Form with Yup Example</Link>
-                </li>            
-                
-            </ul>
-
-            <Switch>
-                <Route path={`${path}/greeting`}>
-                    <Greeting name='Olga' />
-                </Route>
-                <Route path={`${path}/counter`}>
-                    <CounterWrapper />
-                </Route>
-                <Route path={`${path}/userslist`}>
-                    <ParentUsersList />
-                </Route>
-                <Route path={`${path}/loginform`}>
-                    <LoginForm />
-                </Route>
-                <Route path={`${path}/viewport`}>
-                    <ViewPortParams />
-                </Route>
-                <Route path={`${path}/usersloader`}>
-                    <UsersLoader />
-                </Route>
-                <Route path={`${path}/phonesprovider`}>
-                    <PhonesProvider />
-                </Route>
-                <Route path={`${path}/usersprovider`}>
-                    <UsersProvider />
-                </Route>
-                <Route path={`${path}/context`}>
-                    <ContextExample />
-                </Route>      
-                <Route path={`${path}/easyform`}>
-                    <YupForm />
-                </Route>          
-                {/* <Route path={`${path}/dataprovider`}>
+        <li>
+          <Link to={`${url}/context`}>UserPage with Context Example</Link>
+        </li>
+        <li>
+          <Link to={`${url}/easyform`}>Form with Yup Example</Link>
+        </li>
+      </ul>
+      <Switch>
+        <Route path={`${path}/greeting`}>
+          <Greeting name='Olga' />
+        </Route>
+        <Route path={`${path}/counter`}>
+          <CounterWrapper />
+        </Route>
+        <Route path={`${path}/userslist`}>
+          <ParentUsersList />
+        </Route>
+        <Route path={`${path}/loginform`}>
+          <LoginForm />
+        </Route>
+        <Route path={`${path}/viewport`}>
+          <ViewPortParams />
+        </Route>
+        <Route path={`${path}/usersloader`}>
+          <UsersLoader />
+        </Route>
+        <Route path={`${path}/phonesprovider`}>
+          <PhonesProvider />
+        </Route>
+        <Route path={`${path}/usersprovider`}>
+          <UsersProvider />
+        </Route>
+        <Route path={`${path}/context`}>
+          <ContextExample />
+        </Route>
+        <Route path={`${path}/easyform`}>
+          <YupForm />
+        </Route>
+        {/* <Route path={`${path}/dataprovider`}>
                     <DataProvider fileName='/phones.json'> 
                         return <> 
                             {isFetching&& <div>Loading...</div>}
@@ -109,13 +107,12 @@ function Classwork() {
                         </>;
                     <DataProvider/>
                 </Route> */}
-                <Route path={`${path}/*`}>
-                    <NotFound />
-                </Route>
-                
-            </Switch>
-        </div>
-    )
+        <Route path={`${path}/*`}>
+          <NotFound />
+        </Route>
+      </Switch>
+    </div>
+  );
 }
 
 export default Classwork;

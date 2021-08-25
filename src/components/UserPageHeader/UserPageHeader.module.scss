@@ -1,17 +1,17 @@
 .headerContainer {
-    width: 100%;
-    border: 2px solid blue;
-    padding: 1em;
+  width: 100%;
+  border: 2px solid blue;
+  padding: 1em;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 
-    img {
-        width: 4em;
-        height: 4em;;
-        border: 1px solid darkblue;
-        border-radius: 50%;
-    }
+  img {
+    width: 4em;
+    height: 4em;
+    border: 1px solid darkblue;
+    border-radius: 50%;
+  }
 }

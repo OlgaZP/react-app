@@ -1,41 +1,40 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent } from 'react';
 
 export default class Counter extends PureComponent {
-    constructor(props) {
-        super(props)
-    
-        this.state = {
-             currNum: 0,
-        }
-    }
+  constructor (props) {
+    super(props);
 
-    shouldComponentUpdate(nextProps, nextState) {
-       return this.props.step === nextProps.step;
-    }
-    
-    addOne = () => {
-        const {currNum} = this.state;
-        const {step} = this.props;
+    this.state = {
+      currNum: 0,
+    };
+  }
 
-        this.setState({ currNum : currNum + step });
-        
-    }
-    minusOne = () => {
-        const {currNum} = this.state;
-        const {step} = this.props;
+  shouldComponentUpdate (nextProps, nextState) {
+    return this.props.step === nextProps.step;
+  }
 
-        this.setState({ currNum : currNum - step });
-    }
+  addOne = () => {
+    const { currNum } = this.state;
+    const { step } = this.props;
 
-    render() {
-        const {currNum} = this.state;
-        console.log('rerender :>> ');
-        return (
-            <div>
-                <div>{currNum}</div>
-               <button onClick={this.addOne}> + </button> 
-               <button onClick={this.minusOne}> - </button>
-            </div>
-        )
-    }
+    this.setState({ currNum: currNum + step });
+  };
+  minusOne = () => {
+    const { currNum } = this.state;
+    const { step } = this.props;
+
+    this.setState({ currNum: currNum - step });
+  };
+
+  render () {
+    const { currNum } = this.state;
+    console.log('rerender :>> ');
+    return (
+      <div>
+        <div>{currNum}</div>
+        <button onClick={this.addOne}> + </button>
+        <button onClick={this.minusOne}> - </button>
+      </div>
+    );
+  }
 }
