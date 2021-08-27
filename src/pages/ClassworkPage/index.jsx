@@ -6,6 +6,7 @@ import ParentUsersList from '../../components/ParentUsersList';
 import LoginForm from '../../components/LoginForm';
 import ViewPortParams from '../../components/ViewPortParams';
 import UsersLoader from '../../components/UsersLoader';
+import UsersLoaderHook from '../../components/UsersLoaderHook';
 import PhonesProvider from '../../components/PhonesProvider';
 import UsersProvider from '../../components/UsersProvider';
 import DataProvider from '../../components/DataProvider';
@@ -13,6 +14,9 @@ import ContextExample from '../../components/ContextExample';
 import UserPage from '../UserPage';
 import YupForm from '../../components/YupForm';
 import MouseClickerHook from '../../components/MouseClickerHook';
+import ClickerHook from '../../components/ClickerHook';
+import StopwatchHook from '../../components/StopwatchHook';
+import CounterHook from '../../components/CounterHook';
 
 import {
   BrowserRouter as Router,
@@ -35,6 +39,9 @@ function Classwork () {
           <Link to={`${url}/counter`}>Simple Counter</Link>
         </li>
         <li>
+          <Link to={`${url}/counterh`}>Simple Counter with Hook</Link>
+        </li>
+        <li>
           <Link to={`${url}/userslist`}>UsersList Example 1</Link>
         </li>
         <li>
@@ -45,6 +52,9 @@ function Classwork () {
         </li>
         <li>
           <Link to={`${url}/usersloader`}>UsersLoader Example</Link>
+        </li>
+        <li>
+          <Link to={`${url}/usersloaderh`}>UsersLoader with Hook Example</Link>
         </li>
         <li>
           <Link to={`${url}/phonesprovider`}>PhonesProvider Example</Link>
@@ -64,6 +74,12 @@ function Classwork () {
         <li>
           <Link to={`${url}/clicker`}>MouseClicker with Hook Example</Link>
         </li>
+        <li>
+          <Link to={`${url}/clickhook`}>ClickCounter with Hook Example</Link>
+        </li>
+        <li>
+          <Link to={`${url}/watchhook`}>Stopwatch with Hook Example</Link>
+        </li>
       </ul>
       <Switch>
         <Route path={`${path}/greeting`}>
@@ -71,6 +87,9 @@ function Classwork () {
         </Route>
         <Route path={`${path}/counter`}>
           <CounterWrapper />
+        </Route>
+        <Route path={`${path}/counterh`}>
+          <CounterHook />
         </Route>
         <Route path={`${path}/userslist`}>
           <ParentUsersList />
@@ -83,6 +102,9 @@ function Classwork () {
         </Route>
         <Route path={`${path}/usersloader`}>
           <UsersLoader />
+        </Route>
+        <Route path={`${path}/usersloaderh`}>
+          <UsersLoaderHook />
         </Route>
         <Route path={`${path}/phonesprovider`}>
           <PhonesProvider />
@@ -99,7 +121,12 @@ function Classwork () {
         <Route path={`${path}/clicker`}>
           <MouseClickerHook />
         </Route>
-        ;
+        <Route path={`${path}/clickhook`}>
+          <ClickerHook />
+        </Route>
+        <Route path={`${path}/watchhook`}>
+          <StopwatchHook />
+        </Route>
         {/* <Route path={`${path}/dataprovider`}>
                     <DataProvider fileName='/phones.json'> 
                         return <> 

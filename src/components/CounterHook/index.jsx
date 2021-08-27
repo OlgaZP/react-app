@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function CounterHook () {
   const [counter, setCounter] = useState(0);
@@ -12,9 +12,13 @@ function CounterHook () {
     setCounter(counter - step);
   };
 
-  const changeStepHandler = e => {
-    setStep(Number(e.target.value));
+  const changeStepHandler = ({ target: { value } }) => {
+    setStep(Number(value));
   };
+
+  useEffect(() => {
+    document.title = String(counter);
+  }, [counter]);
 
   return (
     <div>
