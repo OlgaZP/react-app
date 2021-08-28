@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NotFound from '../../components/NotFound';
 import CounterWrapper from '../../components/CounterWrapper';
 import Greeting from '../../components/Greeting';
@@ -17,6 +17,8 @@ import MouseClickerHook from '../../components/MouseClickerHook';
 import ClickerHook from '../../components/ClickerHook';
 import StopwatchHook from '../../components/StopwatchHook';
 import CounterHook from '../../components/CounterHook';
+import CounterThemeHook from '../../components/CounterThemeHook';
+import UsersLoaderWithCustomHook from '../../components/UsersLoaderWithCustomHook';
 
 import {
   BrowserRouter as Router,
@@ -25,9 +27,14 @@ import {
   Link,
   useRouteMatch,
 } from 'react-router-dom';
+import { ThemeContext } from '../../contexts';
+import CONSTANTS from '../../constants';
+import CounterWithReducerHook from '../../components/CounterWithReducerHook';
 
 function Classwork () {
   const { path, url } = useRouteMatch();
+
+  const themes = useState(CONSTANTS.THEMES.LIGHT);
   return (
     <div>
       ClassWorks components were writing during lessons.
@@ -40,6 +47,12 @@ function Classwork () {
         </li>
         <li>
           <Link to={`${url}/counterh`}>Simple Counter with Hook</Link>
+        </li>
+        <li>
+          <Link to={`${url}/countert`}>Simple Counter with Theme and Hook</Link>
+        </li>
+        <li>
+          <Link to={`${url}/counterr`}>Simple Counter with Reducer Hook</Link>
         </li>
         <li>
           <Link to={`${url}/userslist`}>UsersList Example 1</Link>
@@ -55,6 +68,11 @@ function Classwork () {
         </li>
         <li>
           <Link to={`${url}/usersloaderh`}>UsersLoader with Hook Example</Link>
+        </li>
+        <li>
+          <Link to={`${url}/usersloaderch`}>
+            UsersLoader with Custom Hook Example
+          </Link>
         </li>
         <li>
           <Link to={`${url}/phonesprovider`}>PhonesProvider Example</Link>
@@ -91,6 +109,15 @@ function Classwork () {
         <Route path={`${path}/counterh`}>
           <CounterHook />
         </Route>
+        {/* пример смены темы компонента */}
+        <Route path={`${path}/countert`}>
+          <ThemeContext.Provider value={themes}>
+            <CounterThemeHook />
+          </ThemeContext.Provider>
+        </Route>
+        <Route path={`${path}/counterr`}>
+          <CounterWithReducerHook />
+        </Route>
         <Route path={`${path}/userslist`}>
           <ParentUsersList />
         </Route>
@@ -105,6 +132,9 @@ function Classwork () {
         </Route>
         <Route path={`${path}/usersloaderh`}>
           <UsersLoaderHook />
+        </Route>
+        <Route path={`${path}/usersloaderch`}>
+          <UsersLoaderWithCustomHook />
         </Route>
         <Route path={`${path}/phonesprovider`}>
           <PhonesProvider />
