@@ -13,8 +13,22 @@ function ChildUserListHW (props) {
       newUsers[index].isSelected = !newUsers[index].isSelected;
       setUsers(newUsers);
     };
+
+    const removeUserHandler = () => {
+      console.log('remove handler work :>> ');
+      const removeUsers = [...users];
+      removeUsers.splice(index, 1);
+      setUsers(removeUsers);
+      console.log('removeUsers :>> ', removeUsers);
+    };
+
     return (
-      <UserListItem key={user.id} user={user} onClickHandler={onClickHandler} />
+      <UserListItem
+        key={user.id}
+        user={user}
+        onClickHandler={onClickHandler}
+        removeUserHandler={removeUserHandler}
+      />
     );
   };
 

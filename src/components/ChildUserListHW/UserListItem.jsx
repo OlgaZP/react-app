@@ -6,6 +6,7 @@ function UserListItem (props) {
   const {
     user: { id, firstName, lastName, age, imgSrc, isSelected },
     onClickHandler,
+    removeUserHandler,
   } = props;
 
   const liStyle = { backgroundColor: 'grey' };
@@ -14,7 +15,10 @@ function UserListItem (props) {
   return (
     <li style={isSelected ? liStyle : null} onClick={onClickHandler}>
       <img src={imgSrc} style={{ borderRadius: '50%', width: '50px' }} />
-      Fullname:"{firstName} {lastName}" Age:"{age}"<button> X </button>
+      Fullname:"{firstName} {lastName}" Age:"{age}"
+      <button on onClick={removeUserHandler}>
+        del
+      </button>
     </li>
   );
 }

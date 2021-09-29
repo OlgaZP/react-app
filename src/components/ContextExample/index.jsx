@@ -29,6 +29,9 @@ const Parent = () => <Child />;
 
 const Child = () => {
   return (
+    //пример того же действия, нос использовнием хука
+    // const user = useContext(UserContext);
+    //return JSON.stringify(user);
     <UserContext.Consumer>
       {user => {
         return JSON.stringify(user);

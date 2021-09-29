@@ -40,6 +40,7 @@ export default class ParentUsersListHW extends Component {
 
   setUsers = newUsers => {
     this.setState({ users: newUsers });
+    console.log(' Users from parent component :>> ', this.state.users);
   };
 
   render () {
