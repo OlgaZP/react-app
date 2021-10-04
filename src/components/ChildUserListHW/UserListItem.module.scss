@@ -1,10 +1,37 @@
 .userContainer {
-  width: 50%;
+  display: flex;
+ // flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
   list-style: none;
   border: darkslategray 1px solid;
-  padding: 0.5em;
+  border-radius: 10px;
+  padding: 0 1em; 
 }
 
 .userSelected {
-  background-color: dodgerblue;
+  // background-color: dodgerblue;
+  box-shadow: 0 0 15px 5px darkslategrey;
+}
+
+.userInfoContainer {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;    
+}
+
+.userImage {
+  border: 1px solid darkslategrey;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2em;
 }
