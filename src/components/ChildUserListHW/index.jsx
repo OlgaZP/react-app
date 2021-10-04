@@ -14,16 +14,13 @@ function ChildUserListHW (props) {
       setUsers(newUsers);
     };
 
-    const removeUserHandler = () => {
-      console.log('remove handler work :>> ');
+    const removeUserHandler = () => {     
       const removeUsers = [...users];
       removeUsers.splice(index, 1);
-      setUsers(removeUsers);
-      console.log('removeUsers :>> ', removeUsers);
+      setUsers(removeUsers);      
     };
 
-    const addUserLikesHandler = () => {
-      console.log(`add likes handler work`);
+    const addUserLikesHandler = () => {      
       const updateUsers = [...users];
       updateUsers[index].likesCount++;
       setUsers(updateUsers);

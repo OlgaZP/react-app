@@ -1,6 +1,5 @@
 .userContainer {
-  display: flex;
- // flex-direction: column;
+  display: flex; 
   justify-content: space-between;
   align-items: center;
   width: 90%;
@@ -10,8 +9,7 @@
   padding: 0 1em; 
 }
 
-.userSelected {
-  // background-color: dodgerblue;
+.userSelected {  
   box-shadow: 0 0 15px 5px darkslategrey;
 }
 
